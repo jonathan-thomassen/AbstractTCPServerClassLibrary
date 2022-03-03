@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server" kind="class" language="C#" prot="public" abstract="yes">
+    <compoundname>AbstractTCPServerClassLibrary::TCPServer::AbstractTCPServer</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1ab6782db2a8a0a1156b0a74d357b1886c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer._port</definition>
+        <argsstring></argsstring>
+        <name>_port</name>
+        <qualifiedname>AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer._port</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" line="8" column="21" bodyfile="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1aa67aa2f9440533fd5304ba980c48ff00" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer._name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <qualifiedname>AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer._name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" line="9" column="24" bodyfile="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a69667214f77cc51734636ede998b7b62" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer._running</definition>
+        <argsstring></argsstring>
+        <name>_running</name>
+        <qualifiedname>AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer._running</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" line="10" column="22" bodyfile="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a559e5a5665f5c166990aa214acef724b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer.AbstractTCPServer</definition>
+        <argsstring>(int port, string name)</argsstring>
+        <name>AbstractTCPServer</name>
+        <qualifiedname>AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer.AbstractTCPServer</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port #</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of server</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" line="17" column="19" bodyfile="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" bodystart="17" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a858100e254dbad560e236b727d23714c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer.NewClient</definition>
+        <argsstring>(TcpListener listener)</argsstring>
+        <name>NewClient</name>
+        <qualifiedname>AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer.NewClient</qualifiedname>
+        <param>
+          <type>TcpListener</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" line="35" column="22" bodyfile="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" bodystart="35" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a6889da1658ddb53a827204c119090ae4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer.StopClient</definition>
+        <argsstring>(TcpListener listener)</argsstring>
+        <name>StopClient</name>
+        <qualifiedname>AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer.StopClient</qualifiedname>
+        <param>
+          <type>TcpListener</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" line="50" column="22" bodyfile="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" bodystart="50" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1ab493724fb705ce3c65fada051ba6ae52" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer.SetRunningFalse</definition>
+        <argsstring>()</argsstring>
+        <name>SetRunningFalse</name>
+        <qualifiedname>AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer.SetRunningFalse</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" line="60" column="22" bodyfile="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" bodystart="60" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1aaa2359ca5e0c874534a73735289784d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer.TcpServerWork</definition>
+        <argsstring>(StreamReader reader, StreamWriter writer)</argsstring>
+        <name>TcpServerWork</name>
+        <qualifiedname>AbstractTCPServerClassLibrary.TCPServer.AbstractTCPServer.TcpServerWork</qualifiedname>
+        <param>
+          <type>StreamReader</type>
+          <declname>reader</declname>
+        </param>
+        <param>
+          <type>StreamWriter</type>
+          <declname>writer</declname>
+        </param>
+        <briefdescription>
+<para>Abstract method which takes a StreamReader and a StreamWriter and does the required work for the server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A StreamReader object</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>writer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A StreamWriter object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" line="69" column="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract TCP Server class to be implemented by an inherited class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" line="7" column="21" bodyfile="AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs" bodystart="7" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1aa67aa2f9440533fd5304ba980c48ff00" prot="private" virt="non-virtual"><scope>AbstractTCPServerClassLibrary::TCPServer::AbstractTCPServer</scope><name>_name</name></member>
+      <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1ab6782db2a8a0a1156b0a74d357b1886c" prot="private" virt="non-virtual"><scope>AbstractTCPServerClassLibrary::TCPServer::AbstractTCPServer</scope><name>_port</name></member>
+      <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a69667214f77cc51734636ede998b7b62" prot="private" virt="non-virtual"><scope>AbstractTCPServerClassLibrary::TCPServer::AbstractTCPServer</scope><name>_running</name></member>
+      <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a559e5a5665f5c166990aa214acef724b" prot="protected" virt="non-virtual"><scope>AbstractTCPServerClassLibrary::TCPServer::AbstractTCPServer</scope><name>AbstractTCPServer</name></member>
+      <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a858100e254dbad560e236b727d23714c" prot="private" virt="non-virtual"><scope>AbstractTCPServerClassLibrary::TCPServer::AbstractTCPServer</scope><name>NewClient</name></member>
+      <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1ab493724fb705ce3c65fada051ba6ae52" prot="private" virt="non-virtual"><scope>AbstractTCPServerClassLibrary::TCPServer::AbstractTCPServer</scope><name>SetRunningFalse</name></member>
+      <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a6889da1658ddb53a827204c119090ae4" prot="private" virt="non-virtual"><scope>AbstractTCPServerClassLibrary::TCPServer::AbstractTCPServer</scope><name>StopClient</name></member>
+      <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1aaa2359ca5e0c874534a73735289784d4" prot="public" virt="pure-virtual"><scope>AbstractTCPServerClassLibrary::TCPServer::AbstractTCPServer</scope><name>TcpServerWork</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="dir_b887e8f0c5663519a38f1d797d0e7a24" kind="dir">
+    <compoundname>AbstractTCPServerClassLibrary</compoundname>
+    <innerdir refid="dir_be85a994e17801c8d89450c7642af297">AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="AbstractTCPServerClassLibrary/"/>
+  </compounddef>
+</doxygen>

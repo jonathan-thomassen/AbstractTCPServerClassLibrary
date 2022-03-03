@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.3" xml:lang="en-US">
+  <compound refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server" kind="class"><name>AbstractTCPServerClassLibrary::TCPServer::AbstractTCPServer</name>
+    <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1ab6782db2a8a0a1156b0a74d357b1886c" kind="variable"><name>_port</name></member>
+    <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1aa67aa2f9440533fd5304ba980c48ff00" kind="variable"><name>_name</name></member>
+    <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a69667214f77cc51734636ede998b7b62" kind="variable"><name>_running</name></member>
+    <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a559e5a5665f5c166990aa214acef724b" kind="function"><name>AbstractTCPServer</name></member>
+    <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a858100e254dbad560e236b727d23714c" kind="function"><name>NewClient</name></member>
+    <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1a6889da1658ddb53a827204c119090ae4" kind="function"><name>StopClient</name></member>
+    <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1ab493724fb705ce3c65fada051ba6ae52" kind="function"><name>SetRunningFalse</name></member>
+    <member refid="class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_1aaa2359ca5e0c874534a73735289784d4" kind="function"><name>TcpServerWork</name></member>
+  </compound>
+  <compound refid="namespace_abstract_t_c_p_server_class_library" kind="namespace"><name>AbstractTCPServerClassLibrary</name>
+  </compound>
+  <compound refid="namespace_abstract_t_c_p_server_class_library_1_1_t_c_p_server" kind="namespace"><name>AbstractTCPServerClassLibrary::TCPServer</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net_1_1_sockets" kind="namespace"><name>System::Net::Sockets</name>
+  </compound>
+  <compound refid="_abstract_t_c_p_server_8cs" kind="file"><name>AbstractTCPServer.cs</name>
+  </compound>
+  <compound refid="dir_b887e8f0c5663519a38f1d797d0e7a24" kind="dir"><name>AbstractTCPServerClassLibrary</name>
+  </compound>
+  <compound refid="dir_be85a994e17801c8d89450c7642af297" kind="dir"><name>AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary</name>
+  </compound>
+  <compound refid="dir_623d5763abc2d1b7900ce3d3fae70fd8" kind="dir"><name>AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer</name>
+  </compound>
+</doxygenindex>

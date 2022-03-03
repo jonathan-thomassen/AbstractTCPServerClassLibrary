@@ -1,0 +1,64 @@
+\hypertarget{_abstract_t_c_p_server_8cs_source}{}\doxysection{Abstract\+TCPServer.\+cs}
+\label{_abstract_t_c_p_server_8cs_source}\index{AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs@{AbstractTCPServerClassLibrary/AbstractTCPServerClassLibrary/TCPServer/AbstractTCPServer.cs}}
+\mbox{\hyperlink{_abstract_t_c_p_server_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00001}00001 \textcolor{keyword}{using} System.Net.Sockets;}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00003}\mbox{\hyperlink{namespace_abstract_t_c_p_server_class_library}{00003}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_abstract_t_c_p_server_class_library_1_1_t_c_p_server}{AbstractTCPServerClassLibrary.TCPServer}} \{}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00007}\mbox{\hyperlink{class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server}{00007}}     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\mbox{\hyperlink{class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server}{AbstractTCPServer}} \{}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00008}00008         \textcolor{keyword}{private} \textcolor{keywordtype}{int} \_port;}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00009}00009         \textcolor{keyword}{private} \textcolor{keywordtype}{string} \_name;}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00010}00010         \textcolor{keyword}{private} \textcolor{keywordtype}{bool} \_running;}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00017}\mbox{\hyperlink{class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_a559e5a5665f5c166990aa214acef724b}{00017}}         \textcolor{keyword}{protected} \mbox{\hyperlink{class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_a559e5a5665f5c166990aa214acef724b}{AbstractTCPServer}}(\textcolor{keywordtype}{int} port, \textcolor{keywordtype}{string} name) \{}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00018}00018             \_port = port;}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00019}00019             \_name = name;}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00020}00020             \_running = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00022}00022             TcpListener listener = \textcolor{keyword}{new} TcpListener(System.Net.IPAddress.Any, \_port);}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00023}00023             TcpListener stopListener = \textcolor{keyword}{new} TcpListener(System.Net.IPAddress.Any, \_port + 1);}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00025}00025             listener.Start();}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00026}00026             stopListener.Start();}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00027}00027             Console.WriteLine(\$\textcolor{stringliteral}{"{}Server \{\_name\} started."{}});}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00029}00029             \textcolor{keywordflow}{while} (\_running) \{}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00030}00030                 Task.Run(() => NewClient(listener));}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00031}00031                 Task.Run(() => StopClient(stopListener));}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00032}00032             \}}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00033}00033         \}}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00035}00035         \textcolor{keyword}{private} \textcolor{keywordtype}{void} NewClient(TcpListener listener) \{}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00036}00036             TcpClient socket = listener.AcceptTcpClient();}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00037}00037             Console.WriteLine(\textcolor{stringliteral}{"{}New client: "{}} + socket.Client.RemoteEndPoint);}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00038}00038             Task.Run(() => \{}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00039}00039                 NetworkStream ns = socket.GetStream();}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00040}00040                 StreamReader reader = \textcolor{keyword}{new} StreamReader(ns);}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00041}00041                 StreamWriter writer = \textcolor{keyword}{new} StreamWriter(ns);}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00043}00043                 \mbox{\hyperlink{class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_aaa2359ca5e0c874534a73735289784d4}{TcpServerWork}}(reader, writer);}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00045}00045                 Console.WriteLine(\textcolor{stringliteral}{"{}Closing connection: "{}} + socket.Client.RemoteEndPoint);}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00046}00046                 socket.Close();}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00047}00047             \});}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00048}00048         \}}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00050}00050         \textcolor{keyword}{private} \textcolor{keywordtype}{void} StopClient(TcpListener listener) \{}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00051}00051             \textcolor{keywordflow}{if} (listener.Pending()) \{}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00052}00052                 TcpClient socket = listener.AcceptTcpClient();}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00053}00053                 Console.WriteLine(\$\textcolor{stringliteral}{"{}Closing server \{\_name\}"{}});}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00054}00054                 SetRunningFalse();}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00055}00055             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00056}00056                 Thread.Sleep(2 * 1000);}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00057}00057             \}}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00058}00058         \}}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00060}00060         \textcolor{keyword}{private} \textcolor{keywordtype}{void} SetRunningFalse() \{}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00061}00061             \_running = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00062}00062         \}}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00069}\mbox{\hyperlink{class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_aaa2359ca5e0c874534a73735289784d4}{00069}}         \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_abstract_t_c_p_server_class_library_1_1_t_c_p_server_1_1_abstract_t_c_p_server_aaa2359ca5e0c874534a73735289784d4}{TcpServerWork}}(StreamReader reader, StreamWriter writer);}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00070}00070     \}}
+\DoxyCodeLine{\Hypertarget{_abstract_t_c_p_server_8cs_source_l00071}00071 \}}
+
+\end{DoxyCode}
